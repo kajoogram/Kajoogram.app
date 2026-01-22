@@ -1,0 +1,128 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>Kajoogram</title>
+    
+    <!-- Safety Polyfill for process.env to prevent crashes in production -->
+    <script>
+      window.process = { env: {} };
+    </script>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Grand+Hotel&family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+      html, body {
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        height: 100%;
+        font-family: 'Plus Jakarta Sans', sans-serif;
+        background-color: #ffffff !important; /* Force white background */
+        -webkit-tap-highlight-color: transparent;
+        overflow-x: hidden;
+      }
+      #root {
+        min-height: 100vh;
+        background-color: #ffffff;
+      }
+      .font-serif {
+        font-family: 'Playfair Display', serif;
+      }
+      /* Brand Font - Instagram Style */
+      .font-instagram {
+        font-family: 'Grand Hotel', cursive;
+        font-weight: 400;
+      }
+      .text-instagram {
+        /* Pink, Purple, Orange, Soft Yellow Gradient */
+        background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        color: transparent;
+        filter: drop-shadow(0px 2px 4px rgba(220, 39, 67, 0.15));
+        padding-bottom: 2px;
+      }
+      
+      ::-webkit-scrollbar {
+        display: none;
+      }
+      @keyframes slow-galaxy {
+        0% { transform: scale(1) rotate(0deg); opacity: 0.8; }
+        50% { transform: scale(1.1) rotate(2deg); opacity: 1; }
+        100% { transform: scale(1) rotate(0deg); opacity: 0.8; }
+      }
+      .galaxy-bg {
+        background: radial-gradient(circle at center, #f0f4ff 0%, #ffffff 70%);
+        animation: slow-galaxy 15s infinite ease-in-out;
+      }
+      .glass {
+        background: rgba(255, 255, 255, 0.7);
+        backdrop-filter: blur(12px);
+        -webkit-backdrop-filter: blur(12px);
+      }
+      .text-luxury {
+        background: linear-gradient(135deg, #4b5563 0%, #9ca3af 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+      @keyframes spin-slow {
+        from { transform: rotate(0deg); }
+        to { transform: rotate(360deg); }
+      }
+      .animate-spin-slow {
+        animation: spin-slow 8s linear infinite;
+      }
+
+      /* Premium UI Animations */
+      .animate-in {
+        animation-duration: 0.6s;
+        animation-fill-mode: both;
+        animation-timing-function: cubic-bezier(0.16, 1, 0.3, 1);
+      }
+      .fade-in { animation-name: fadeIn; }
+      .zoom-in { animation-name: zoomIn; }
+      .slide-in-from-bottom { animation-name: slideInFromBottom; }
+      .slide-in-from-bottom-2 { animation-name: slideInFromBottom2; }
+
+      @keyframes fadeIn {
+        from { opacity: 0; }
+        to { opacity: 1; }
+      }
+      @keyframes zoomIn {
+        from { transform: scale(0.97); opacity: 0; }
+        to { transform: scale(1); opacity: 1; }
+      }
+      @keyframes slideInFromBottom {
+        from { transform: translateY(20px); opacity: 0; }
+        to { transform: translateY(0); opacity: 1; }
+      }
+      @keyframes slideInFromBottom2 {
+        from { transform: translateY(40px); opacity: 0; }
+        to { transform: translateY(0); opacity: 1; }
+      }
+    </style>
+<script type="importmap">
+{
+  "imports": {
+    "react/": "https://esm.sh/react@^19.2.3/",
+    "react": "https://esm.sh/react@^19.2.3",
+    "@google/genai": "https://esm.sh/@google/genai@^1.38.0",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.3/",
+    "lucide-react": "https://esm.sh/lucide-react@^0.562.0",
+    "firebase/": "https://esm.sh/firebase@^12.8.0/",
+    "vite": "https://esm.sh/vite@^7.3.1",
+    "@vitejs/plugin-react": "https://esm.sh/@vitejs/plugin-react@^5.1.2",
+    "react-router-dom": "https://esm.sh/react-router-dom@^7.12.0"
+  }
+}
+</script>
+</head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+  </body>
+</html>

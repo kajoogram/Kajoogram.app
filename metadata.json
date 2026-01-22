@@ -1,0 +1,9 @@
+{
+  "name": "Copy of Tk of Kajoogram",
+  "description": "A luxury fashion social commerce platform featuring premium aesthetics, interactive marketplace, and social engagement.",
+  "requestFramePermissions": [
+    "camera",
+    "microphone",
+    "geolocation"
+  ]
+}
